@@ -12,9 +12,11 @@
   "app": {
     "windows": [
       {
-        "title": "music_player",
-        "width": 800,
-        "height": 600
+        "title": "Autism",
+        "width": 1200,
+        "height": 1000,
+        "maximized": true,
+        "decorations": true
       }
     ],
     "security": {

@@ -63,6 +63,7 @@ pub fn scan_directory(dir_path: &str) -> Vec<Track> {
         .collect()
 }
 
+// Перед тестом надо закинуть файлы в папку tests/fixtures/audios, либо создать их самостоятельно
 #[cfg(test)]
 mod tests {
     use super::*;
