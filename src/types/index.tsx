@@ -45,7 +45,7 @@ export interface NavItem {
     id: string;
     icon: string;
     label: string;
-    active?: boolean;
+    link: string;
 }
 
 /** Плейлист в списке Sidebar (упрощённый) */

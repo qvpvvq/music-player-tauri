@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router';
 import { navItems, sidebarPlaylists, user } from '../../../data/mock.ts';
 
 export default function Sidebar() {
@@ -14,10 +15,13 @@ export default function Sidebar() {
             {/* Navigation */}
             <nav className="nav">
                 {navItems.map((item) => (
-                    <a key={item.id} className={`nav-item ${item.active ? 'active' : ''}`}>
+                    <NavLink
+                        to={item.link}
+                        key={item.id}
+                        className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
                         <span className="icon">{item.icon}</span>
                         <span>{item.label}</span>
-                    </a>
+                    </NavLink>
                 ))}
             </nav>
 
