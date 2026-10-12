@@ -19,7 +19,10 @@ export default function Sidebar() {
                         to={item.link}
                         key={item.id}
                         className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-                        <span className="icon">{item.icon}</span>
+                        <span
+                            className="icon"
+                            style={{ '--icon': `url(${item.icon})` } as React.CSSProperties}
+                        />
                         <span>{item.label}</span>
                     </NavLink>
                 ))}

@@ -45,7 +45,7 @@ export default function LibraryContent() {
 
                 <div className="library-toolbar">
                     <div className="search-wrapper">
-                        <span className="search-icon">🔍</span>
+                        <img src="uicons/search.svg" className="search-icon" />
                         <input
                             className="search-input"
                             type="text"
@@ -55,7 +55,6 @@ export default function LibraryContent() {
                 </div>
 
                 <div ref={parentRef} className="track-list">
-                    {/* Заголовок выносим ВНЕ скролл-контейнера, либо делаем его sticky */}
                     <div className="track-list-head">
                         <span style={{ textAlign: 'center' }}>#</span>
                         <span />

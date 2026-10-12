@@ -293,8 +293,18 @@ body {
 }
 .nav-item .icon {
     width: 18px;
-    text-align: center;
-    font-size: 15px;
+    height: 18px;
+    flex-shrink: 0;
+    background-color: var(--text-2); /* серый по умолчанию */
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+    transition: background-color 0.15s;
+}
+.nav-item:hover .icon {
+    background-color: var(--text-0);
+}
+.nav-item.active .icon {
+    background-color: var(--accent-1); /* красный */
 }
 
 .nav-divider {
@@ -1099,6 +1109,17 @@ body {
     padding-left: 2px;
     transition: transform 0.15s, background 0.15s;
 }
+
+.ctrl-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: currentColor; /* берёт цвет кнопки */
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+    transition: background-color 0.15s;
+}
+
 .ctrl-play:hover {
     transform: scale(1.06);
     background: var(--accent-2);

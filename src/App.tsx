@@ -1,6 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router';
 import HomePage from './pages/HomePage';
-import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
 import PlayerBar from './components/layout/PlayerBar';
 import LibraryPage from './pages/LibraryPage';
@@ -8,7 +7,6 @@ import LibraryPage from './pages/LibraryPage';
 function App() {
     return (
         <div className="app">
-            <Header />
             <Sidebar />
             <Routes>
                 <Route path="/" element={<Navigate to={'/home'} />} />

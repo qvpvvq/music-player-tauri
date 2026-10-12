@@ -43,7 +43,7 @@ export default function PlayerBar() {
                 ref={audioRef}
                 loop={repeat}
                 onEnded={() => setIsPlaing(false)}
-                src="/marmixer-deep-sea-324392.mp3"
+                src="music/marmixer-deep-sea-324392.mp3"
                 onLoadedMetadata={(event) => setDuration(event.currentTarget.duration)}
                 onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}
             />
@@ -62,10 +62,22 @@ export default function PlayerBar() {
             <div className="player-center">
                 <div className="player-controls">
                     <button className="ctrl" title="Shuffle">
-                        🔀
+                        <span
+                            className="ctrl-icon"
+                            style={
+                                { '--icon': 'url(uicons/audio-shuffle.svg)' } as React.CSSProperties
+                            }
+                        />
                     </button>
                     <button className="ctrl" title="Previous">
-                        ⏮
+                        <span
+                            className="ctrl-icon"
+                            style={
+                                {
+                                    '--icon': 'url(uicons/player-audio-arrow-left.svg)',
+                                } as React.CSSProperties
+                            }
+                        />
                     </button>
                     <button
                         onClick={() => setIsPlaing((prev) => !prev)}
@@ -74,13 +86,23 @@ export default function PlayerBar() {
                         ▶
                     </button>
                     <button className="ctrl" title="Next">
-                        ⏭
+                        <span
+                            className="ctrl-icon"
+                            style={
+                                {
+                                    '--icon': 'url(uicons/player-audio-arrow-right.svg)',
+                                } as React.CSSProperties
+                            }
+                        />
                     </button>
                     <button
                         onClick={() => setRepeat((prev) => !prev)}
-                        className="ctrl active"
+                        className={`ctrl ${repeat ? 'active' : ''}`}
                         title="Repeat">
-                        🔁
+                        <span
+                            className="ctrl-icon"
+                            style={{ '--icon': 'url(uicons/repeat.svg)' } as React.CSSProperties}
+                        />
                     </button>
                 </div>
 
@@ -105,13 +127,16 @@ export default function PlayerBar() {
             {/* Right: volume + extras */}
             <div className="player-right">
                 <button className="ctrl" title="Тексты">
-                    📝
+                    <img src="uicons/song-lyrics-icon.svg" />
                 </button>
                 <button className="ctrl" title="Очередь">
-                    📋
+                    <img src="uicons/list-music.svg" />
+                </button>
+                <button className="ctrl" title="Эквалайзер">
+                    <img src="uicons/equaliser.svg" />
                 </button>
                 <button className="ctrl" title="Громкость">
-                    🔊
+                    <img src="uicons/volume.svg" />
                 </button>
                 <div className="volume-bar">
                     <div style={{ width: `${volume}%` }} className="volume-fill"></div>

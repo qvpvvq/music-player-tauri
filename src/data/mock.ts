@@ -7,12 +7,10 @@ export const user: User = {
 };
 
 export const navItems: NavItem[] = [
-    { id: 'home', icon: '🏠', label: 'Главная', link: '/home' },
-    { id: 'library', icon: '📚', label: 'Библиотека', link: '/library' },
-    { id: 'playlists', icon: '📁', label: 'Плейлисты', link: '/playlists' },
-    { id: 'queue', icon: '🎧', label: 'Очередь', link: '/queue' },
-    { id: 'stats', icon: '📊', label: 'Статистика', link: '/statistics' },
-    { id: 'settings', icon: '⚙', label: 'Настройки', link: '/settings' },
+    { id: 'home', icon: 'uicons/home.svg', label: 'Главная', link: '/home' },
+    { id: 'library', icon: 'uicons/library.svg', label: 'Библиотека', link: '/library' },
+    { id: 'playlists', icon: 'uicons/playlists.svg', label: 'Плейлисты', link: '/playlists' },
+    { id: 'favorite', icon: 'uicons/heart.svg', label: 'Избранное', link: '/favorite' },
 ];
 
 export const sidebarPlaylists: SidebarPlaylist[] = [
