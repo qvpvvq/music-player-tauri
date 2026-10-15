@@ -1,7 +1,6 @@
 const actions = [
-    { id: 'url', icon: '🔗', label: 'По ссылке' },
-    { id: 'search', icon: '🔍', label: 'Найти трек' },
-    { id: 'folder', icon: '📂', label: 'Новая папка' },
+    { id: 'url', icon: '', label: 'Добавить трек по ссылке' },
+    { id: 'search', icon: 'uicons/search.svg', label: 'Найти трек' },
 ];
 
 export default function QuickActions() {
@@ -9,7 +8,7 @@ export default function QuickActions() {
         <div className="quick-actions">
             {actions.map((a) => (
                 <button key={a.id} className="qa-btn">
-                    <span className="qa-icon">{a.icon}</span>
+                    {a.icon && <img src={a.icon} style={{ padding: '5px' }} className="qa-icon" />}
                     {a.label}
                 </button>
             ))}

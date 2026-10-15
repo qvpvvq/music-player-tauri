@@ -15,10 +15,6 @@ export default function MainContent() {
     return (
         <main className="main">
             <div className="content">
-                <h1 className="greeting">
-                    Привет, {user.name} <span className="wave">👋</span>
-                </h1>
-
                 <QuickActions />
 
                 <TrackSection
